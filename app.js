@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 var request = require('request');
 var resposta = {};
-var port = 3000;
+var port = process.env.PORT ||3000;
 
 app.get('/:cep', (req,res) => {
     var cep = req.params.cep;
